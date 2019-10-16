@@ -1,7 +1,4 @@
 """
-molecool.py
-A Python package for analyzingnd visualizing xyz files. For MolSSI Workshop.
-
 This module is for functions which perform measurements.
 """
 
