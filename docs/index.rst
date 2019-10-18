@@ -5,12 +5,23 @@
 
 Welcome to molecool's documentation!
 =========================================================
+molecool is a Python package designed to read in, perfom analysis,
+and visualize molecular coordinates. The file formats `xyz` and `pdb` are 
+currently supported. 
+
+We don't actually recommend use of this package as it's for illustrative purposes for MolSSI's workshop on `Best Practices
+in Python package development <https://molssi-education.github.io/CMS-Python-DevOps/>`_! 
+
+If you want to do visualization or analysis of molecular data in Python, there are great libraries like `MDAnalsis <https://www.mdanalysis.org/>`_ or 
+`NGLView <http://nglviewer.org/nglview/latest/api.html>`_.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
    getting_started
+   analysis
+   visualization
    api
 
 
