@@ -2,6 +2,8 @@
 Functions for manipulating xyz files.
 """
 
+import numpy as np
+
 def open_xyz(file_location):
     """Open and read coordinates and atom symbols from a xyz file.
 
