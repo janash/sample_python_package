@@ -64,6 +64,7 @@ instance/
 
 # Sphinx documentation
 docs/_build/
+docs/autosummary/
 
 # PyBuilder
 target/
@@ -103,3 +104,6 @@ ENV/
 
 # vscode
 *.vscode
+
+# this thing
+*.DS_Store
