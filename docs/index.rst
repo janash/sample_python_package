@@ -12,7 +12,7 @@ currently supported.
 We don't actually recommend use of this package as it's for illustrative purposes for MolSSI's workshop on `Best Practices
 in Python package development <https://molssi-education.github.io/CMS-Python-DevOps/>`_! 
 
-If you want to do visualization or analysis of molecular data in Python, there are great libraries like `MDAnalsis <https://www.mdanalysis.org/>`_ or 
+If you want to do visualization or analysis of molecular data in Python, there are libraries like `MDAnalsis <https://www.mdanalysis.org/>`_ or 
 `NGLView <http://nglviewer.org/nglview/latest/api.html>`_.
 
 .. toctree::
@@ -22,7 +22,6 @@ If you want to do visualization or analysis of molecular data in Python, there a
    getting_started
    analysis
    visualization
-   api
 
 
 
