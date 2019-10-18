@@ -10,6 +10,10 @@ dependencies:
   - pytest-cov
   - codecov
 
+  # Dependencies
+  - numpy
+  - matplotlib
+
     # Pip-only installs
   #- pip:
   #  - codecov
