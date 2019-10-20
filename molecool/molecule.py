@@ -29,6 +29,12 @@ def build_bond_list(coordinates, max_bond=1.5, min_bond=0):
         associated values are the bond length.
 
     """
+
+    if min_bond < 0:
+        raise ValueError("Bond length can not be less than zero.")
+
+    if len(coordinates) < 1:
+        raise ValueError("Bond list can not be calculated for coordinate length less than 1.")
     
     # Find the bonds in a molecule
     bonds = {}
@@ -87,7 +93,7 @@ def calculate_center_of_mass(symbols, coordinates):
     .. math:: \\vec{R}=\\frac{1}{M} \\sum_{i=1}^{n} m_{i}\\vec{r_{}i}
     
     """
-    
+
     total_mass = calculate_molecular_mass(symbols)
     
     mass_array = np.zeros([len(symbols), 1])

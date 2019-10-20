@@ -24,3 +24,9 @@ def test_build_bond_list_default(test_molecule):
 
     for atoms, bonds in bonds.items():
         assert bonds == 1.4
+
+def test_build_bond_list_failure():
+    coordinates = np.array([])
+    
+    with pytest.raises(ValueError):
+        molecool.build_bond_list(coordinates)

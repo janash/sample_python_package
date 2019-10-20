@@ -22,6 +22,5 @@ atom_colors = {
     'F': '#FFFFE0',
     'Cl': '#98FB98',
     'Br': '#F4A460',
-    'S': 'yellow'
 }
 
