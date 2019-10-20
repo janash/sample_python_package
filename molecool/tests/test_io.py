@@ -18,6 +18,8 @@ def test_read_xyz():
     assert len(symbols) == 3
     assert len(coordinates) == 3
     assert np.array_equal(np.array([0.000000, -0.007156, 0.965491]), coordinates[0])
+    #assert symbols == ["O", "H", "H"]
+
 
 def test_write_xyz(tmp_path):
     """Test which writes a temporary file using pytest tmp_path function"""
@@ -41,3 +43,12 @@ H\t1.0\t0.0\t0.0
 
     assert expected_text == written_text
 
+def test_open_pdb():
+    pdb_file = os.path.join(current_location, '..', 'data', 'pdb', 'water.pdb')
+    symbols, coordinates = molecool.io.open_pdb(pdb_file)
+
+    assert len(symbols) == 3
+    assert len(coordinates) == 3
+    assert np.array_equal(np.array([0.000, -0.007, 0.965]), coordinates[0])
+    assert np.array_equal(symbols, np.array(["O", "H", "H"]))
+    

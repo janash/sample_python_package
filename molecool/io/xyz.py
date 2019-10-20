@@ -16,7 +16,7 @@ def open_xyz(file_location):
     -------
     coords : np.ndarray
         The coordinates of the xyz file.
-    symbols : list
+    symbols : np.ndarray
         The atomic symbols of the xyz file.
 
     """
