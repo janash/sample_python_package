@@ -16,14 +16,14 @@ def test_molecool_imported():
 def test_calculate_distance():
     """Test the calculate_distance function"""
 
-    r1 = np.array([0, 0, -1])
+    r1 = np.array([0, 0, 0])
     r2 = np.array([0, 1, 0])
 
-    expected_distance = np.sqrt(2.)
+    expected_distance = 2
 
     calculated_distance = molecool.calculate_distance(r1, r2)
 
-    assert expected_distance == calculated_distance
+    expected_distance == calculated_distance
 
 def test_calculate_angle_90():
     """Test the calculate_angle function"""
@@ -59,4 +59,4 @@ def test_calculate_angle(p1, p2, p3, expected_angle):
 
     calculated_angle = molecool.calculate_angle(p1, p2, p3, degrees=True)
 
-    assert np.isclose(expected_angle, calculated_angle), F'{calculated_angle} {expected_angle}'
+    assert expected_angle == pytest.approx(calculated_angle), F'{calculated_angle} {expected_angle}'

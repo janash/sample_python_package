@@ -1,6 +1,7 @@
 """
 Functions for calculating molecule properties.
 """
+import numpy as np
 
 from .measure import calculate_distance
 from .atom_data import atom_weights
@@ -99,7 +100,7 @@ def calculate_center_of_mass(symbols, coordinates):
     mass_array = np.zeros([len(symbols), 1])
     
     for i in range(len(symbols)):
-        mass_array[i] = atomic_weights[symbols[i]]
+        mass_array[i] = atom_weights[symbols[i]]
     
     center_of_mass = sum(coordinates * mass_array) / total_mass
     
