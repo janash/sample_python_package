@@ -10,13 +10,13 @@ import numpy as np
 import os
 
 @pytest.fixture
-def test_molecule():
+def methane_molecule():
     symbols = np.array(['C', 'H', 'H', 'H', 'H'])
     coordinates = np.array([[1,1,1], [2.4,1,1], [-0.4, 1, 1], [1, 1, 2.4], [1, 1, -0.4]])
     return symbols, coordinates
 
-def test_build_bond_list_default(test_molecule):
-    symbols, coordinates = test_molecule
+def test_build_bond_list_default(methane_molecule):
+    symbols, coordinates = methane_molecule
 
     bonds = molecool.build_bond_list(coordinates)
 
@@ -25,8 +25,8 @@ def test_build_bond_list_default(test_molecule):
     for atoms, bonds in bonds.items():
         assert bonds == 1.4
 
-def test_molecular_mass(test_molecule):
-    symbols, coordiantes = test_molecule
+def test_molecular_mass(methane_molecule):
+    symbols, coordinates = methane_molecule
     
     calculated_mass = molecool.calculate_molecular_mass(symbols)
 
@@ -41,9 +41,8 @@ def test_build_bond_list_failure():
     with pytest.raises(ValueError):
         molecool.build_bond_list(coordinates)
 
-def test_center_of_mass(test_molecule):
-    symbols = np.array(['C', 'H', 'H', 'H', 'H'])
-    coordinates = np.array([[1,1,1], [2.4,1,1], [-0.4, 1, 1], [1, 1, 2.4], [1, 1, -0.4]])
+def test_center_of_mass(methane_molecule):
+    symbols, coordinates = methane_molecule
 
     center_of_mass = molecool.calculate_center_of_mass(symbols, coordinates)
 
